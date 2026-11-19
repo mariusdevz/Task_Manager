@@ -1,0 +1,176 @@
+:root {
+  --bg-primary: #111318;
+  --bg-surface: #1a1d25;
+  --bg-elevated: #252936;
+  --accent-primary: #8b5cf6;
+  --text-primary: #f1f2f6;
+  --text-secondary: #969baa;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --hover-button: #7c3aed;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: verdana, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 32px auto;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--bg-surface);
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+#task-form {
+  background-color: var(--bg-surface);
+  padding: 24px;
+  border-radius: 12px;
+  margin: 24px auto;
+  max-width: 700px;
+}
+
+#task-form section {
+  margin-bottom: 20px;
+}
+
+#task-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+#task-form input[type="text"],
+#task-form input[type="date"],
+#task-form select {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--bg-elevated);
+  border-radius: 8px;
+}
+
+#task-form input[type="text"]:focus,
+#task-form input[type="date"]:focus,
+#task-form select:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+#task-form button {
+  background-color: var(--accent-primary);
+  color: var(--text-primary);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#task-form button:hover {
+  background-color: var(--hover-button);
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.filters button {
+  background-color: var(--bg-elevated);
+  color: var(--text-secondary);
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  color: var(--text-primary);
+  background-color: var(--accent-primary);
+}
+.filters button.active {
+  color: var(--text-primary);
+  background-color: var(--accent-primary);
+}
+
+#task-display {
+  background-color: var(--bg-surface);
+  padding: 24px;
+  border-radius: 12px;
+  margin: 24px auto;
+}
+
+#task-display ul {
+  list-style: none;
+  padding: 0;
+}
+
+#todoList li {
+  background-color: var(--bg-elevated);
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-left: 2px solid var(--accent-primary);
+}
+
+#empty {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 20px;
+}
+
+#todoList li:last-child {
+  margin-bottom: 0;
+}
+
+.delete {
+  border: none;
+  background-color: #ef4444;
+  color: var(--text-primary);
+  padding: 5px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete:hover {
+  background-color: #f59e0b;
+}

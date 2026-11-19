@@ -1,0 +1,10 @@
+Token Value
+--bg-primary #111318
+--bg-surface #1A1D25
+--bg-elevated #252936
+--accent-primary #8B5CF6
+--text-primary #F1F2F6
+--text-secondary #969BAA
+--color-success #22C55E
+--color-warning #F59E0B
+--color-danger #EF4444

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header>
+        <h1>Task Manager</h1>
+        <p>Organize your day, one task at a time.</p>
+    </header>
+
+    <main class="container">
+        <form id="task-form">
+            <section>
+                <h2>Create a task</h2>
+                <label for="task-title">Task Name</label>
+                <input type="text" id="task-title" placeholder="Enter your task..." name="task-title" required>
+            </section>
+
+            <section>
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                    <option value="" selected disabled>Select Category</option>
+                    <option value="work">Work</option>
+                    <option value="study">Study</option>
+                    <option value="personal">Personal</option>
+                </select>
+                <label for="date">Due Date</label>
+                <input type="date" name="date" id="date" placeholder="Due date" required>
+            </section>
+            <button type="submit">Add Task</button>
+        </form>
+
+        <section>
+            <div class="filters">
+                <button aria-pressed="false" type="button" id="all">All</button>
+                <button aria-pressed="false" type="button" id="active">Active</button>
+                <button aria-pressed="false" type="button" id="completed">Completed</button>
+            </div>
+        </section>
+
+        <section id="task-display">
+            <ul id="todoList"></ul>
+            <p id="empty">No Task yet.</p>
+        </section>
+
+    </main>
+
+    <script src="main.js" defer></script>
+</body>
+
+</html>
