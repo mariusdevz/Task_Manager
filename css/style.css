@@ -59,6 +59,10 @@ p {
   max-width: 700px;
 }
 
+.task-Title {
+  overflow-wrap: anywhere;
+}
+
 #task-form section {
   margin-bottom: 20px;
 }
@@ -117,10 +121,16 @@ p {
   cursor: pointer;
 }
 
+.filters button[aria-pressed="true"] {
+  color: var(--text-primary);
+  background-color: var(--accent-primary);
+}
+
 .filters button:hover {
   color: var(--text-primary);
   background-color: var(--accent-primary);
 }
+
 .filters button.active {
   color: var(--text-primary);
   background-color: var(--accent-primary);
@@ -163,7 +173,7 @@ p {
 
 .delete {
   border: none;
-  background-color: #ef4444;
+  background-color: var(--color-danger);
   color: var(--text-primary);
   padding: 5px 15px;
   border-radius: 8px;

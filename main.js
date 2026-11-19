@@ -19,9 +19,9 @@ function loadTasks() {
         if (!Array.isArray(saved)) return [];
 
         const isValid = saved.every(task => {
-            return typeof task.text === 'string' &&
-                task !== null &&
+            return task !== null &&
                 typeof task === 'object' &&
+                typeof task.text === 'string' &&
                 typeof task.text === 'string' &&
                 task.text.trim() !== '' &&
                 typeof task.id === 'string' &&
@@ -104,7 +104,7 @@ function renderTasks() {
         checkBox.addEventListener("change", () => {
             toggleTasks(task.id)
         })
-        checkBox.setAttribute("aria-label", "Mark as done")
+        checkBox.setAttribute("aria-label", `Mark ${task.text} as Complete`)
 
         spanDate.textContent = task.dueDate;
         spanDate.className = "task-date"
@@ -161,6 +161,11 @@ function addTask() {
     const categoryInput = category.value.trim();
     const dateInput = date.value.trim();
     if (inputTitle === '' || categoryInput === '' || dateInput === '') return;
+
+    taskTitle.addEventListener('input', () => {
+        taskTitle.focus()
+    })
+
     const newTask = {
         id: crypto.randomUUID(),
         text: inputTitle,
